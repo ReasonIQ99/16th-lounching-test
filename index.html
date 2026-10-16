@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ReasonIQ99 — Think Smart. Solve Fast. Competitive exam reasoning and quantitative aptitude preparation.">
+  <title>ReasonIQ99 | Think Smart. Solve Fast.</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="ReasonIQ99 home">
+    <img src="assets/reasoniq99-logo.png" alt="ReasonIQ99 logo">
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  <nav id="mainNav">
+    <a href="#home">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#notifications">Notifications</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="eyebrow">Competitive Exam Preparation</p>
+      <h1>Think Smart.<br><span>Solve Fast.</span></h1>
+      <p>Build your reasoning, quantitative aptitude and problem-solving skills with structured learning and focused practice.</p>
+      <div class="hero-actions">
+        <a class="button button-gold" href="#courses">Explore Courses</a>
+        <a class="button button-outline" href="#notifications">Latest Notifications</a>
+      </div>
+    </div>
+    <div class="hero-mark"><img src="assets/reasoniq99-logo.png" alt="ReasonIQ99"></div>
+  </section>
+
+  <div class="ticker" aria-label="Latest notifications">
+    <strong>Latest Updates</strong><span id="tickerText">Check the notifications section for exam updates and announcements.</span>
+    <a href="#notifications">View all →</a>
+  </div>
+
+  <section class="section" id="courses">
+    <div class="section-heading">
+      <p class="eyebrow">Learn with a plan</p><h2>Our Courses</h2>
+      <p>Choose an exam category to find syllabus, notes, practice and previous-year questions.</p>
+    </div>
+    <div class="course-grid" id="courseGrid"></div>
+  </section>
+
+  <section class="section section-blue" id="notifications">
+    <div class="section-heading">
+      <p class="eyebrow">Stay informed</p><h2>Latest Notifications</h2>
+      <p>Important exam announcements in one place. Always verify dates and eligibility on the official website.</p>
+    </div>
+    <div class="notification-layout">
+      <div id="notificationList" class="notification-list"></div>
+      <aside class="admin-panel">
+        <span class="admin-icon">✦</span><h3>Manage Content</h3>
+        <p>Use the local admin tools to add sample notifications or attach study files in this browser.</p>
+        <button class="button button-dark" id="adminToggle">Open Admin Tools</button>
+        <div id="adminTools" class="admin-tools hidden">
+          <label>Admin passcode <input id="adminPass" type="password" placeholder="Enter passcode"></label>
+          <p class="hint">Demo passcode: <b>IQ99ADMIN</b></p>
+          <button class="button button-gold" id="unlockAdmin">Unlock</button>
+          <div id="adminForm" class="hidden">
+            <hr>
+            <label>Notification title<input id="newNoticeTitle" placeholder="e.g. SSC exam update"></label>
+            <label>Short details<textarea id="newNoticeDesc" rows="3" placeholder="Add a brief summary"></textarea></label>
+            <label>Official link<input id="newNoticeLink" type="url" placeholder="https://..."></label>
+            <button class="button button-gold" id="addNotice">Add Notification</button>
+            <hr>
+            <label>Course for file upload
+              <select id="uploadCourse">
+                <option>UPSC</option><option>Banking</option><option>SSC</option><option>NET / SET</option>
+              </select>
+            </label>
+            <label>Resource type
+              <select id="uploadType">
+                <option>Syllabus PDF</option><option>Notes PDF</option><option>Practice Series</option><option>PYQ Series</option>
+              </select>
+            </label>
+            <label>Select file <input id="resourceFile" type="file" accept=".pdf,.doc,.docx,.jpg,.png"></label>
+            <button class="button button-dark" id="saveResource">Attach Resource</button>
+            <p class="hint">Demo limitation: files and content are saved only in this browser using local storage. They are not uploaded to a live server.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <div class="notice-detail hidden" id="noticeDetail" role="dialog" aria-modal="true">
+      <button class="close-detail" id="closeDetail" aria-label="Close details">×</button>
+      <div id="noticeDetailContent"></div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="about-grid">
+      <div class="about-copy">
+        <p class="eyebrow">Who we are</p><h2>About ReasonIQ99</h2>
+        <h3>Empowering Minds Through Smart Learning</h3>
+        <p>ReasonIQ99 is dedicated to building analytical thinking and problem-solving skills for students and competitive-exam aspirants. Our approach combines clear concepts, practical reasoning, and student-focused learning to make challenging topics easier to understand.</p>
+        <div class="mission-box"><h3>Our Mission</h3><p>To make quality reasoning and aptitude training accessible, affordable, and effective for every learner. We aim to inspire confidence and help students progress through structured content and regular practice.</p></div>
+        <div class="value-grid">
+          <article><span>🧠</span><h4>Reasoning</h4><p>Logical, analytical and verbal reasoning strategies.</p></article>
+          <article><span>🧮</span><h4>Quantitative Aptitude</h4><p>Numbers, data interpretation, percentages and arithmetic.</p></article>
+          <article><span>🏆</span><h4>Focused Practice</h4><p>Practice sets designed to build confidence and speed.</p></article>
+        </div>
+      </div>
+      <div class="founder-card">
+        <img src="assets/founder-photo.jpg" alt="Tr. Rathod Naveen, founder and educator">
+        <h3>Tr. Rathod Naveen</h3><p>Founder &amp; Educator</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact-section" id="contact">
+    <div class="section-heading"><p class="eyebrow">Get in touch</p><h2>Contact ReasonIQ99</h2><p>Questions about courses or study resources? Reach out through the contact details below.</p></div>
+    <div class="contact-cards">
+      <a href="mailto:reasoniq99@gmail.com"><span>✉</span><b>Email</b><small>reasoniq99@gmail.com</small></a>
+      <a href="https://www.youtube.com/@reasoniq99" target="_blank" rel="noopener"><span>▶</span><b>YouTube</b><small>@reasoniq99</small></a>
+      <a href="https://www.instagram.com/reasoniq99/" target="_blank" rel="noopener"><span>◎</span><b>Instagram</b><small>@reasoniq99</small></a>
+    </div>
+    <p class="small-note">Add your official WhatsApp channel URL in <code>app.js</code> when it is ready.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-brand"><img src="assets/reasoniq99-logo.png" alt="ReasonIQ99 logo"><p>Think Smart. Solve Fast.</p></div>
+  <div class="footer-links"><a href="#home">Home</a><a href="#courses">Courses</a><a href="#notifications">Notifications</a><a href="#about">About Us</a><a href="#contact">Contact</a></div>
+  <p class="copyright">© <span id="year"></span> ReasonIQ99. All rights reserved.</p>
+  <p class="legal-note">Educational information is provided for guidance. Please confirm official exam details with the relevant recruiting authority.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
